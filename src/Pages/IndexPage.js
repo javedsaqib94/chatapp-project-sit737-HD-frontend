@@ -2,13 +2,12 @@ import React from "react";
 
 const IndexPage = (props) => {
   React.useEffect(() => {
-    const token = localStorage.getItem("C_Token");
+    const token = localStorage.getItem("CC_Token");
     console.log(token);
     if (!token) {
       props.history.push("/login");
     } else {
-      props.history.push("/dashboard");  ///that link is not working as 
-      //  well (if there is any other alternative please let me know)
+      props.history.push("/dashboard");
     }
     // eslint-disable-next-line
   }, [0]);

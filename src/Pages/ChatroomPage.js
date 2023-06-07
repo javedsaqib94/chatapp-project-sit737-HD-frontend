@@ -54,7 +54,7 @@ const ChatroomPage = ({ match, socket }) => {
   return (
     <div className="chatroomPage">
       <div className="chatroomSection">
-        <div className="cardHeader">Chatroom Name</div>
+        <div className="cardHeader">Chatroom  </div>
         <div className="chatroomContent">
           {messages.map((message, i) => (
             <div key={i} className="message">

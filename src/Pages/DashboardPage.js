@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import makeToast from "../Toaster";
 
 const DashboardPage = (props) => {
   const [chatrooms, setChatrooms] = React.useState([]);
@@ -8,7 +9,7 @@ const DashboardPage = (props) => {
     axios
       .get("http://localhost:8000/chatroom", {
         headers: {
-          Authorization: "Bearer " + localStorage.getItem("C_Token"),
+          Authorization: "Bearer " + localStorage.getItem("CC_Token"),
         },
       })
       .then((response) => {
@@ -65,7 +66,7 @@ const DashboardPage = (props) => {
             name="chatroomName"
             id="chatroomName"
             ref={chatroomNameRef}
-            placeholder="ChatterBox Nepal"
+            placeholder="ChatterBox Malik"
           />
         </div>
       </div>
